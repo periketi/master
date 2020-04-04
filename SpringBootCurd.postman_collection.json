@@ -1,0 +1,92 @@
+{
+	"id": "6fc83fa2-4638-47aa-a8bf-009754b02093",
+	"name": "SpringBootCurd",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"6eff49b3-19d9-4126-a3fb-adf71b589e4f",
+		"04fa4fcf-06d0-44fa-a38d-5a3007a98884",
+		"4af9be82-27b1-4fd5-8dc6-ce6a5cf324ed",
+		"779842b9-af75-44fd-bac5-1cb666159f1f"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "04fa4fcf-06d0-44fa-a38d-5a3007a98884",
+			"name": "GetSpecific",
+			"url": "http://localhost:8080/customer/get/12",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"pathVariables": {}
+		},
+		{
+			"id": "4af9be82-27b1-4fd5-8dc6-ce6a5cf324ed",
+			"name": "Add",
+			"url": "http://localhost:8080/customer/add",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": " {\n        \"customerId\": 34,\n        \"customerName\": \"Bharath\"\n    }",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "6eff49b3-19d9-4126-a3fb-adf71b589e4f",
+			"name": "GetAll",
+			"url": "http://localhost:8080/customer/getAll",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"pathVariables": {}
+		},
+		{
+			"id": "779842b9-af75-44fd-bac5-1cb666159f1f",
+			"name": "Delete",
+			"url": "http://localhost:8080/customer/delete/12",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"pathVariables": {}
+		}
+	]
+}

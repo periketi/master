@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="C:/eclipseworkspace/AngularExamples/angular.min.js">
+myApp.controller('myController', function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+</script>
+<script type="text/javascript"
+	src="C:/eclipseworkspace/AngularExamples/sorting.js">
+
+</script>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="myController">Full Name: {{firstName + " " +
+		lastName}}</div>
+		
+	<div ng-controller="myController" border='1'>
+		<div>
+			Filter By : <select ng-model="sortcolumn" step="1" min="0" max="5">
+				<option value="name">BY Name ASC</option>
+				<option value="-name">BY Name DSC</option>
+				<option value="Age">BY Age ASC</option>
+				<option value="-Age">BY Age DSC</option>
+				<option value="desgination">BY desgination asc</option>
+				<option value="-desgination">BY desgination DSC</option>
+			</select>
+		</div>
+		<table border='1'>
+			<tr>
+				<td>Name</td>
+				<td>Age</td>
+				<td>desgination</td>
+			</tr>
+			<tr ng-repeat="tech in techs |orderBy:sortcolumn">
+				<td>{{ tech.name}}</td>
+				<td>{{ tech.Age}}</td>
+				<td>{{ tech.desgination}}</td>
+			</tr>
+			</div>
+</body>
+</html>

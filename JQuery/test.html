@@ -1,0 +1,47 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function doSubmit(){
+
+	document.form[0].action="POST";
+	document.form[0].submit();
+}
+
+function getData(){
+
+alert("status----");
+
+var xmlHttp = new XMLHttpRequest();
+alert("status---222-"+xmlHttp.status);
+alert("readyState---222-"+xmlHttp.readyState);
+xmlHttp.readyState = 4;
+xmlHttp.onreadystatechange = function(){
+alert("readyState---3333-"+xmlHttp.readyState);
+
+if(xmlHttp.readyState == 0 && xmlHttp.status == 0){
+alert("readyState---3333-"+xmlHttp.readyState);
+
+ }
+
+}
+}
+
+</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>ASNKEY:</td>
+			<td><input type="text" name="asnkey" onChange="javascript:getData();" /></td>
+		</tr>
+		<tr>
+
+		<tr>
+			<td> <input type="submit" onclick="javascript:doSubmit();" /></td>
+		</tr>
+	</table>
+</body>
+</html>

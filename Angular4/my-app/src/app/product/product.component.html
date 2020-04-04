@@ -1,0 +1,9 @@
+<p>
+  product works!
+</p>
+<div class="main">
+<input placeholder="newprod" [(ngModel)]="newprod"><button (click) ="addprod()">Add</button>
+<li *ngFor ="let i of products; let ind=index">{{i}} 
+<span (click) ="deleteprod(ind)">X</span></li>
+</div>
+

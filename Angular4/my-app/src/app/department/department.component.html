@@ -1,0 +1,8 @@
+<p>
+  department works!
+</p>
+<div class="main">
+<input placeholder="newdept" [(ngModel)]="newdept"><button (click) ="adddept()">Add</button>
+<li *ngFor ="let i of dept let ind=index">{{i}} 
+<span (click) ="deletedept(ind)">X</span></li>
+</div>

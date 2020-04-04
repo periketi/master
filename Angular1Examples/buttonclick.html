@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="C:/eclipseworkspace/AngularExamples/angular.min.js">
+
+</script>
+<script type="text/javascript"
+	src="C:/eclipseworkspace/AngularExamples/buttonclick.js">
+
+</script>
+</head>
+<body ng-app="MYAPP">
+
+	<div ng-controller="buttonContoller" border='1'  >
+	<div>
+Row per Page : <input type="number" step="1" min="0" max="5" ng-model="rowLimit"/>
+</div>
+<table border='1'>
+		<tr>
+			<td>Tech</td>
+			<td>Likes</td>
+			<td>dislikes</td>
+			<td>like/dislikes</td>
+		</tr>
+		<tr ng-repeat="tech in tech | limitTo:rowLimit">
+			<td>{{ tech.name | lowercase }}</td>
+			<td>{{ tech.likes | currency}}</td>
+			<td>{{ tech.dislikes|number }}</td>
+			<td>
+			<input type="button" value="like" ng-click="incLikes(tech)"/>
+				<input type="button" value="dislike" ng-click="incDislikes(tech)"/>
+			</td>
+		</tr>
+	</div>
+</body>
+</html>

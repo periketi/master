@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="C:/eclipseworkspace/AngularExamples/angular.min.js">
+
+</script>
+<script type="text/javascript"
+	src="C:/eclipseworkspace/AngularExamples/repeate.js">
+
+</script>
+</head>
+<body ng-app="MYAPP">
+	<table ng-controller="repeateContoller" border='1'>
+		<tr>
+			<td>Name</td>
+			<td>Age</td>
+			<td>Desgination</td>
+		</tr>
+		<tr ng-repeat="employee in employees">
+			<td>{{ employee.name }}</td>
+			<td>{{ employee.Age }}</td>
+			<td>{{ employee.desgination }}</td>
+		</tr>
+	</table>
+		<div ng-controller="repeateContollerNew" border='1'>
+		<ul>
+		<li ng-repeat="country in countries">
+			 {{ country.name }}
+		<ul>
+		<li ng-repeat="city in country.cities">
+			 {{ city.name }}</li>
+		</ul>
+		</li>
+		</ul>
+	</div>
+
+</body>
+</html>

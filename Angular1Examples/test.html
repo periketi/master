@@ -1,0 +1,16 @@
+<html>
+<script>
+var myApp = angular.module('myApp', []);
+myApp.controller('myCtrl', function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+</script>
+<script type="text/javascript"
+	src="C:/eclipseworkspace/AngularExamples/angular.min.js">
+</script>
+<body>
+
+	<div ng-app="myApp">Full Name: {{firstName + " " + lastName}}</div>
+</body>
+</html>
